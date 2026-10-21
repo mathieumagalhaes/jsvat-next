@@ -11,13 +11,10 @@ export const poland: Country = {
       total += Number(vat.charAt(i)) * poland.rules.multipliers.common[i];
     }
 
-    // Establish check digits subtracting modulus 11 from 11.
+    // The remainder is the check digit. A remainder of 10 is not a valid NIP.
     total = total % 11;
-    if (total > 9) {
-      total = 0;
-    }
+    if (total === 10) return false;
 
-    // Compare it with the last character of the VAT number. If it's the same, then it's valid.
     const expect = Number(vat.slice(9, 10));
     return total === expect;
   },
