@@ -51,9 +51,11 @@ export const valid = [
   '996293815MVA',
   '996707415MVA',
   '996840506MVA',
-  '999600476MVA'
+  '999600476MVA',
+  'NO998041538MVA',
+  'NO995460009MVA'
 ];
 
 export const validOnlyByFormat = ['962209011MVA', '962209012MVA', '962209013MVA', '962209014MVA'];
 
-export const invalid = ['96220901', '962209018', '864234232'];
+export const invalid = ['96220901', '962209018', '864234232', 'NO998041539MVA'];
